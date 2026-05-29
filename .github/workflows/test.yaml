@@ -25,15 +25,16 @@ jobs:
 
       - name: Run tests
         run: |
-          cd test
-          make clean
-          make
+          cd test && make clean && make
+echo "Files generated"
+ls -lah
+if [ -f results.xml ]; then
+    ! grep -q "failure" results.xml
+else
+    echo "Error: results.xml not found"
+    exit 1
+fi
 
-          echo "Files generated"
-          ls -lah
-          test -f results.xml
-          # make will return success even if the test fails, so check for failure in the results.xml
-          ! grep failure results.xml
 
       - name: Test Summary
         uses: test-summary/action@v2.4
