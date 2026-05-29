@@ -9,12 +9,15 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+arithmetic logic unit
 
 ## How to test
 
-Explain how to use your project
+Simulation Method
 
 ## External hardware
+FPGA Development Board
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Xilinx Spartan Series
+Basys 3
+Intel/Altera FPGA boards
